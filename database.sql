@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS momoseo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE momoseo;
+
+CREATE TABLE IF NOT EXISTS ai_history (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    module VARCHAR(100) NOT NULL,
+    input_text TEXT NOT NULL,
+    generated_text TEXT NOT NULL
+);
